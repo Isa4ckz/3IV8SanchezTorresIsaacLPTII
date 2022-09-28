@@ -7,8 +7,9 @@ class Descuentos {
     String user;
     int edad;
     double abono;
+    
     char socios;
-    double abono1;
+    
     char otravez;
     socios = 'S';
     otravez = 'Y';
@@ -23,40 +24,48 @@ class Descuentos {
     do{
     edad = 0;
     abono = 0;
-    abono1 = 0;
+    
+    
     System.out.println("¿Cual es la cantidad de tu abono?");
-      abono = teclado.nextDouble();
+      abono = teclado.nextInt();
     System.out.println("Introduce tu edad");
       edad= teclado.nextInt();
-    if (edad <=65 && edad<100) { 
-      abono1 = abono *.40;
-    }
-      
-    else  if (edad <=21 && edad>0){
+  
+       if (edad >=100){
+     System.out.println("Felicidades por ser tan grande");
+       }else{
+      if(edad<=0){
+          System.out.println("¿Puedes escribir?");}
+         else{
+     if(edad <=21 && edad>=1){
       System.out.println("¿Sus padres son socios? Escribe (S/N) respectivamente ");
 		  socios = teclado.next(). charAt(0);
-    
-     if (socios == 'S')
+     
+       if(socios == 'S')
             {
-        abono1 = abono * .45;
-               abono = abono - abono1;
-    System.out.println("El descuento a su abono es de :" + abono1 + " y su abono con descuento es : "+ abono);
+        abono = abono * .45;
+        
+    
+            }
+       else{
+        abono = abono*.25;
+         
       }}
-      if (socios == 'N'){
-        abono1 = abono*.25;
-         abono = abono - abono1;
-    System.out.println("El descuento a su abono es de :" + abono1 + " y su abono con descuento es : "+ abono);
+       else {
+         
+       if (edad <=65 && edad<100) { 
+      abono = abono *.40;
+        
       }
-        if (edad>100){
-        System.out.println("Felicidades por ser tan grande");
-       }
-         if (edad<0){
-          System.out.println("¿Puedes escribir?");
-        }
+     
+    
+    System.out.println("El descuento a su abono es de :" + abono);
+      
+         }}}
       System.out.println("¿Otra vez? Si y No (Y/N)");
       otravez = teclado.next(). charAt(0);
     }while(otravez == 'Y');
     //cuando finaliza el programa aparece el autor
     System.out.println("Elaborado por un niño llamado Isaac");
-  }
-}
+  
+    }}
