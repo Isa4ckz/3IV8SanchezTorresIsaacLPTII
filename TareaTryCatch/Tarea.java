@@ -15,6 +15,7 @@ public class Tarea {
     System.out.println("2. Area y perimetro de figuras");
     System.out.println("3. Costo de llamadas ");
     System.out.println("4. Sueldo de empleado");
+	//valiendo roña
     h = entrada.next().charAt(0);
 //aaaa
     switch(h){
