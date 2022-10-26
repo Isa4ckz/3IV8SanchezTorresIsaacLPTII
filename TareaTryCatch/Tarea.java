@@ -5,7 +5,9 @@ public class Tarea {
   char h;
   //objeto
   Scanner entrada = new Scanner(System.in);
+  //aaaaa no los hice
 
+  
   //metodos
   public void menu(){
 //aqui debe de ir el do pero aun no tengo la idea centrada
